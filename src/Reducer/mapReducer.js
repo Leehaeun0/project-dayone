@@ -8,14 +8,11 @@ export const mapInitState = {
   isSearchVisible: false,
   isPlacesVisible: false,
   message: '',
-  clickPosition: {},
-  // // clickPosition: {
-  //   lat: 123.123,
-  //   lng: 123.123,
-  //   name: '성수동',
-  //   marker: {},
-
-  // }
+  clickPosition: {
+    lat: 0,
+    lng: 0,
+    name: '',
+  },
   activeId: 0,
 };
 
@@ -43,6 +40,7 @@ export const mapReducer = (state, action) => {
         ...state,
         sublist,
         clickPosition,
+        activeId,
       };
     case 'SET_PLACES':
       return {
@@ -98,7 +96,13 @@ export const mapReducer = (state, action) => {
       return {
         ...state,
         clickPosition,
-        sublist: [],
+        activeId,
+        sublist,
+      };
+    case 'CLEAR_CLICK_POSITION':
+      return {
+        ...state,
+        clickPosition: {},
       };
     case 'SET_ACTIVE_ID':
       return {

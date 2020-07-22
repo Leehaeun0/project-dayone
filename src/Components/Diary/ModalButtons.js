@@ -6,14 +6,15 @@ import { MainContext } from '../../Context/MainContext';
 
 const cx = classNames.bind(styles);
 
-const ModalButtons = ({ dateState }) => {
+const ModalButtons = ({ dateState, location }) => {
   const mainCtx = React.useContext(MainContext);
   const { dispatch } = mainCtx;
   const { modalState, setModalState } = React.useContext(DiaryContext);
   const [msgState, setMsgState] = useState('');
 
+  const closeModal = () => setModalState('initial');
+
   const calendarSubmit = () => {
-    console.log(dateState);
     if (!dateState) {
       setMsgState('날짜를 선택해 주세요');
     } else {
@@ -23,9 +24,12 @@ const ModalButtons = ({ dateState }) => {
     }
   };
 
-  const closeModal = () => setModalState('initial');
-
-  const mapSubmit = () => {};
+  const mapSubmit = () => {
+    console.log(location);
+    if (!location.name) return;
+    dispatch({ type: 'CHANGE_LOCATION', location });
+    setModalState('initial');
+  };
 
   return (
     <>

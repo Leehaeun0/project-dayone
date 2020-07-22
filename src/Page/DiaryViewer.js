@@ -29,6 +29,7 @@ const DiaryViewer = () => {
 
   useEffect(() => {
     getDiary(id);
+    console.log(state);
     return () => {
       clearViewerDiary();
     };
@@ -77,8 +78,15 @@ const DiaryViewer = () => {
     <main className={cx('wrapViewer')}>
       <h2 className={cx('a11yHidden')}>다이어리 보기</h2>
       <h2 className={cx('title')}>{viewerDiary.title}</h2>
-      <span className={cx('date')}>{viewerDiary.date}</span>
       {renderDiary()}
+      <div className={cx('wrapInfo')}>
+        <span className={cx('date')}>{viewerDiary.date}</span>
+        {viewerDiary.location && viewerDiary.location.name ? (
+          <span className={cx('location')}>{viewerDiary.location.name}</span>
+        ) : (
+          ''
+        )}
+      </div>
       <input
         id="viewerBookmark"
         className={cx('bookmarkInput')}

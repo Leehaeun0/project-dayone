@@ -6,6 +6,7 @@ import styles from './Style/Modal.module.scss';
 import { DiaryContext } from '../Context/DiaryContext';
 import ModalMap from './Diary/ModalMap';
 import ModalCalendar from './Diary/ModalCalendar';
+import { MapProvider } from '../Context/MapContext';
 
 const cx = classNames.bind(styles);
 
@@ -33,22 +34,24 @@ const Modal = () => {
   };
 
   return (
-    <div
-      style={{ display: `${changeModalState()}` }}
-      className={cx('dimmed')}
-      onClick={onClick}
-    >
-      <div className={cx('modal')}>
-        {changeModal()}
-        {/* <button
+    <MapProvider>
+      <div
+        style={{ display: `${changeModalState()}` }}
+        className={cx('dimmed')}
+        onClick={onClick}
+      >
+        <div className={cx('modal')}>
+          {changeModal()}
+          {/* <button
           className={cx('modalDeleteBtn')}
           type="button"
           onClick={onClick}
         >
           <FontAwesomeIcon icon={faTimes} />
         </button> */}
+        </div>
       </div>
-    </div>
+    </MapProvider>
   );
 };
 

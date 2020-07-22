@@ -64,7 +64,7 @@ const ProfileInfo = ({ pageCtx }) => {
         className={cx('settingBtn')}
         onClick={onClickSetting}
         style={{
-          left: `calc(29rem + ${userId.length * 12}px)`,
+          left: `calc(29rem + ${userId.length * 13}px)`,
         }}
       >
         <FontAwesomeIcon icon={faCog} />

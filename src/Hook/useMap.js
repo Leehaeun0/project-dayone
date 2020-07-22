@@ -9,19 +9,6 @@ const useMap = () => {
     dispatch({ type: 'SET_MAP', payload });
   };
 
-  const setSublist = (diaries, clickPosition) => {
-    const sublist = diaries.filter(
-      ({ location }) =>
-        location.lat === clickPosition.lat &&
-        location.lng === clickPosition.lng,
-    );
-    const payload = {
-      sublist,
-      clickPosition,
-    };
-    dispatch({ type: 'SET_SUBLIST', payload });
-  };
-
   const setPlaces = (places) => {
     const payload = { places };
     dispatch({ type: 'SET_PLACES', payload });
@@ -56,9 +43,18 @@ const useMap = () => {
     dispatch({ type: 'UPDATE_PLACE', payload });
   };
 
-  const setClickPosition = (clickPosition) => {
-    const payload = { clickPosition };
+  const setClickPosition = (clickPosition, activeId, diaries) => {
+    const sublist = diaries.filter(
+      ({ location }) =>
+        location.lat === clickPosition.lat &&
+        location.lng === clickPosition.lng,
+    );
+    const payload = { clickPosition, activeId, sublist };
     dispatch({ type: 'SET_CLICK_POSITION', payload });
+  };
+
+  const clearClickPosition = () => {
+    dispatch({ type: 'CLEAR_CLICK_POSITION', payload: {} });
   };
 
   const setActiveId = (activeId, clickPosition, diaries) => {
@@ -69,7 +65,6 @@ const useMap = () => {
   return {
     mapState,
     setMap,
-    setSublist,
     setPlaces,
     setPagination,
     setSearchVisible,
@@ -78,6 +73,7 @@ const useMap = () => {
     setMessage,
     updatePlace,
     setClickPosition,
+    clearClickPosition,
     setActiveId,
   };
 };

@@ -7,7 +7,6 @@ export const MapProvider = ({ children }) => {
   const {
     mapState,
     setMap,
-    setSublist,
     setPlaces,
     setPagination,
     setSearchVisible,
@@ -16,13 +15,13 @@ export const MapProvider = ({ children }) => {
     setMessage,
     updatePlace,
     setClickPosition,
+    clearClickPosition,
     setActiveId,
   } = useMap();
 
   const mapContextValue = {
     mapState,
     setMap,
-    setSublist,
     setPlaces,
     setPagination,
     setSearchVisible,
@@ -31,6 +30,7 @@ export const MapProvider = ({ children }) => {
     setMessage,
     updatePlace,
     setClickPosition,
+    clearClickPosition,
     setActiveId,
   };
 

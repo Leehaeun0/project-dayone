@@ -6,6 +6,7 @@ import MapComponent from '../Components/Map/MapComponent';
 import DiarySublist from '../Components/DiarySublist';
 
 const cx = classNames.bind(styles);
+
 const Map = () => {
   return (
     <main className={cx('main')}>

@@ -11,6 +11,7 @@ import image1 from '../Util/asset/image1.jpg';
 import image2 from '../Util/asset/image2.jpg';
 import image3 from '../Util/asset/image3.jpg';
 import image4 from '../Util/asset/image4.jpg';
+
 const cx = classNames.bind(styles);
 
 const TimeLineMedia = () => {
@@ -39,9 +40,7 @@ const TimeLineMedia = () => {
                 ${
                   diary.imagePaths.length
                     ? diary.imagePaths[0]
-                    : diary.id > 4
-                    ? images[2]
-                    : images[diary.id - 1]
+                    : 'https://takashimaeda.jp/wp-content/uploads/2016/02/nasulog_dayone2_banner.jpg'
                 }
                 )`,
               }}

@@ -1,5 +1,3 @@
-let diaryId = 15;
-
 const diaries = [
   {
     id: 1,
@@ -13,7 +11,7 @@ const diaries = [
       name: '서울 성동구 성수동 2가',
     },
     isBookmarked: true,
-    tags: [],
+    tags: ['스터디', '프론트엔드', '프로젝트', 'DAY_ONE'],
     imagePaths: [],
   },
   {
@@ -27,7 +25,7 @@ const diaries = [
       name: '서울 성동구 성수동 2가',
     },
     isBookmarked: false,
-    tags: [],
+    tags: ['오늘일기'],
     imagePaths: [],
   },
   {
@@ -139,6 +137,7 @@ const diaries = [
     isBookmarked: false,
     tags: [],
     imagePaths: [
+      'https://cdn.dribbble.com/users/373152/screenshots/2056489/slice_2_1x.png',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
     ],
@@ -156,6 +155,7 @@ const diaries = [
     isBookmarked: false,
     tags: [],
     imagePaths: [
+      'https://takashimaeda.jp/wp-content/uploads/2016/02/nasulog_dayone2_banner.jpg',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
     ],
@@ -173,6 +173,7 @@ const diaries = [
     isBookmarked: false,
     tags: [],
     imagePaths: [
+      'https://images.techhive.com/images/article/2016/03/day-one-mac-icon-100649205-large.jpg',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
     ],
@@ -190,7 +191,7 @@ const diaries = [
     isBookmarked: false,
     tags: [],
     imagePaths: [
-      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+      'https://pbs.twimg.com/profile_images/694312120272318464/iFZU5oBJ_400x400.png',
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
     ],
   },
@@ -237,7 +238,279 @@ const diaries = [
       'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
     ],
   },
+  {
+    id: 16,
+    title: 'Diary Title 16',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 17,
+    title: 'Diary Title 17',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 18,
+    title: 'Diary Title 18',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 19,
+    title: 'Diary Title 19',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 20,
+    title: 'Diary Title 20',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 21,
+    title: 'Diary Title 22',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 22,
+    title: 'Diary Title 22',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 23,
+    title: 'Diary Title 23',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 24,
+    title: 'Diary Title 24',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 25,
+    title: 'Diary Title 25',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 26,
+    title: 'Diary Title 26',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 27,
+    title: 'Diary Title 27',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 28,
+    title: 'Diary Title 28',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 29,
+    title: 'Diary Title 29',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 30,
+    title: 'Diary Title 30',
+    content: '<p>This is diary 16</p>',
+    date: '2020-7-13',
+    location: {
+      lat: 37.62197524055062,
+      lng: 127.16017523675508,
+      name: '서울 성동구 성수동 2가',
+    },
+    isBookmarked: false,
+    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
+  {
+    id: 31,
+    title:
+      'Diary Title 31 testtestestsetsteststsetestsetset aregeargaegaeragrara',
+    content:
+      '<p>This is diary 16 testtestestsetsteststsetestsetsetesttestestsetsteststsetestsetsettesttestestsetsteststsetestsetsettesttestestsetsteststsetestsetdijfdao;sijfosijfsioafjoasjfisdojfioasjfios;dfjset</p>',
+    date: '2020-7-13',
+    location: {},
+    isBookmarked: false,
+    tags: ['태그를', 'test', '태그를', 'test'],
+    imagePaths: [
+      'https://images3.alphacoders.com/105/1052299.jpg',
+      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
+    ],
+  },
 ];
+
+let diaryId = diaries.length;
 
 /* 전체 diary list 조회
 GET /api/posts
@@ -253,22 +526,26 @@ POST /api/posts
 exports.write = (ctx) => {
   // REST API의 Requiest Body는 ctx.request.body에서 조회 가능
   const {
+    id,
     title,
     content,
     date,
     location,
-    imagePaths,
     isBookmarked,
+    tags,
+    imagePaths,
   } = ctx.request.body;
   diaryId += 1;
   const diary = {
-    id: diaryId,
+    id,
+    // id: diaryId,
     title,
     content,
     date,
     location,
-    imagePaths,
     isBookmarked,
+    tags,
+    imagePaths,
   };
   diaries.push(diary);
   ctx.body = diary;

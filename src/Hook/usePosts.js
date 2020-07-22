@@ -127,8 +127,17 @@ const usePosts = () => {
     dispatch({ type: 'SET_EDIT_STATE' });
   };
 
-  const editProfile = (msg, pic) => {
+  const editProfile = async (msg, pic) => {
     dispatch({ type: 'EDIT_PROFILE', msg, pic });
+
+    // try {
+    // await Api.patchDiaries({ id, isBookmarked });
+    // } catch (e) {
+    //   dispatch({
+    //     type: 'ERROR',
+    //     error: { error: { state: true, error: e.message } },
+    //   });
+    // }
   };
 
   const pushTag = (tag) => {

@@ -1,7 +1,6 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useState, useContext } from 'react';
 import { useLocation } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -21,7 +20,7 @@ const TimeLine = () => {
   const { pathname } = useLocation();
   const context = useContext(MainContext);
   const { state } = context;
-  const { userData, diaries } = state;
+  const { userData, allTags } = state;
   const { userId, pic, msg } = userData;
   const altPic =
     'https://www.seekpng.com/png/small/41-410093_circled-user-icon-user-profile-icon-png.png';
@@ -39,26 +38,20 @@ const TimeLine = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const tagArr = [];
-  diaries.forEach((diary) => {
-    diary.tags.forEach((tag) => {
-      if (tagArr.includes(tag)) return;
-      tagArr.push(tag);
-    });
-  });
-
   const renderTags = () => {
-    return tagArr.map((tag, i) => (
-      <li key={i} className={cx('tag')}>
-        <FontAwesomeIcon icon={faHashtag} className={cx('icon')} />
-        {tag}
+    return allTags.map(({ key, name }) => (
+      <li key={key} className={cx('tag')}>
+        <Link to={`/tags/${name}`} className={cx('aTag')}>
+          <FontAwesomeIcon icon={faHashtag} className={cx('icon')} />
+          {name}
+        </Link>
       </li>
     ));
   };
 
   return (
     <main>
-      <div className={cx('timelineNav')}>
+      <div className={cx('timeline')}>
         <aside className={cx('aside')}>
           <div className={cx('profile')}>
             <div

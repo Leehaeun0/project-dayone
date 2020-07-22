@@ -5,12 +5,16 @@ $mainColor: #45c0ff;
   flex-flow: row wrap;
   justify-content: space-between;
   width: 65%;
+  height: 100vh;
   margin: 0 0 10% 35%;
+
+  & > div {
+    width: 100%;
+  }
 
   .timelineList {
     display: flex;
     border: 1px solid #dbdbdb;
-    // border-radius: 4px;
     flex-direction: row;
     position: relative;
     width: 100%;
@@ -19,6 +23,11 @@ $mainColor: #45c0ff;
 
     &:nth-child(n + 2) {
       margin-top: 3rem;
+    }
+
+    & > a {
+      display: block;
+      width: 100%;
     }
 
     &::before {
@@ -51,12 +60,13 @@ $mainColor: #45c0ff;
           font-size: 1.4rem;
           font-weight: 400;
           line-height: 2rem;
+          white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          text-align: justify;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 1;
+          // text-align: justify;
+          // display: -webkit-box;
+          // -webkit-box-orient: vertical;
+          // -webkit-line-clamp: 1;
         }
 
         .date {
@@ -72,9 +82,10 @@ $mainColor: #45c0ff;
           font-size: 1.1rem;
           font-weight: 400;
           line-height: 1.3;
+          word-break:break-all;
           overflow: hidden;
           text-overflow: ellipsis;
-          text-align: justify;
+          // text-align: justify;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
@@ -111,14 +122,6 @@ $mainColor: #45c0ff;
         transition: 0.2s;
         pointer-events: none;
       }
-
-      // input[type='checkbox'] + label {
-      //   transition: 0.2s;
-      // }
-
-      // input[type='checkbox']:checked + label {
-      //   color: $mainColor;
-      // }
     }
   }
 

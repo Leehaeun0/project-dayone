@@ -1,5 +1,7 @@
 # 다이어리 앱 DAY ONE 클론 코딩
 
+# Version 0.1
+
 <br>
 
 # 주제

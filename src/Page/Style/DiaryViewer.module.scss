@@ -1,33 +1,43 @@
 $mainColor: #45C0FF;
+$padding: 40px;
 
 .wrapViewer {
   position: relative;
-  margin-top: 70px;
   margin-top: 55px;
-  // background-color: yellowgreen;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 1px solid #dbdbdb;
+  padding: $padding;
+
+
+
 
   .title {
-    max-width: calc(100% - 105px);
+    max-width: calc(100% - 80px);
     margin-bottom: 30px;
+    margin-bottom: 90px;
     font-size: 24px;
     font-weight: 500;
+    word-break: break-all;
   }
-  .date {
-    display: block;
-    margin-bottom: 65px;
+  .wrapInfo {
+    margin-bottom: 50px;
     color: #7a7a7a;
-    font-size: 16px;
+  }
+  .location {
+    margin-left: 16px;
   }
 
   .content {
     margin-bottom: 30px;
-    min-height: 55vh;
+    min-height: 51vh;
     font-size: 20px;
     line-height: 150%;
-    word-break: keep-all;
+    word-break: break-all;
 
     img {
-      width: 100%;
+      max-width: 100%;
+      // padding: 30px 90px;
     }
     blockquote {
       border-left: 4px solid #ccc;
@@ -55,7 +65,7 @@ $mainColor: #45C0FF;
     font-weight: 500;
     border-radius: 3px;
     font-size: 16px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 
   & button:not(.bookmarkBtn):hover, 
@@ -82,8 +92,8 @@ $mainColor: #45C0FF;
   
   .bookmarkIcon {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: $padding;
+    right: $padding;
     font-size: 1.5rem;
     
     &.active {

@@ -1,8 +1,14 @@
 .map {
+  position: relative;
   box-sizing: border-box;
   width: 70%;
-  height: calc(100vh - 55px);
+  height: calc(86vh - 55px);
+  margin: 6vh 0 8vh;
   font-size: 1rem;
+
+  div {
+    box-sizing: content-box;
+  }
 
   .mapSearchWrap {
     border-radius: 1rem;

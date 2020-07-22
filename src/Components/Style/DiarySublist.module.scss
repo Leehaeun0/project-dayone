@@ -1,4 +1,4 @@
-$mainColor: #45C0FF;
+$mainColor: #45c0ff;
 $outline: 1px solid #dbdbdb;
 
 .addBtn {
@@ -67,16 +67,22 @@ $outline: 1px solid #dbdbdb;
     .thumbnail {
       // padding: 5px;
       // width: 25%;
-      height: 5rem;
       width: 80px;
-      margin-right: 15px;
+      height: 80px;
+      // margin-right: 15px;
+      background-repeat: no-repeat;    
+      background-size: cover;
+      background-position: center;
     }
 
     .info {
-      width: 75%;
+      width: 66%;
+      margin-left: 4%;
       // text-align: center;
 
       .title {
+        // width: 200px;
+        max-width: 100%;
         font-size: 1.2rem;
         font-weight: 600;
         color: #181818;
@@ -85,13 +91,21 @@ $outline: 1px solid #dbdbdb;
         text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 1.5rem;
-        // padding: 0 5px;
+        max-width: 185px;
       }
 
+      .location {
+        font-size: 0.8rem;
+        color: #686868;
+        margin-top: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
       .details {
         font-size: 0.9rem;
         color: #686868;
-        margin-top: 30px;
+        margin-top: 6px;
       }
     }
   }

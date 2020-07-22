@@ -19,11 +19,14 @@ const Header = () => {
   const { pathname } = useLocation();
   const lastLocation = useLastLocation();
   const pastPathname = lastLocation && lastLocation.pathname;
-  const pastActive = pathname.includes('/diaryViewer') && pastPathname;
+  const pastActive =
+    (pathname.includes('/diaryViewer') || pathname.includes('/tags')) &&
+    pastPathname;
   const match = useRouteMatch({
     path: '/diary',
   });
 
+  console.log(lastLocation);
   return (
     <header className={cx('header')}>
       <div className={cx('container')}>
@@ -46,7 +49,11 @@ const Header = () => {
               <FontAwesomeIcon icon={faHome} className={cx('icon')} />
               <span className={cx('tooltip')}>홈</span>
             </NavLink>
-            <NavLink to="/diary" activeClassName={cx('active')}>
+            <NavLink
+              to="/diary"
+              activeClassName={cx('active')}
+              className={cx({ active: pastActive === '/diary' })}
+            >
               <FontAwesomeIcon icon={faPen} className={cx('icon')} />
               <span className={cx('tooltip')}>일기 작성</span>
             </NavLink>
@@ -81,4 +88,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

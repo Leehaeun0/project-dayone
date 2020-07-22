@@ -1,3 +1,6 @@
+import sanitizeHtml from 'sanitize-html';
+import allowedHtml from '../Util/util';
+
 const getToday = () => {
   const today = new Date();
   return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
@@ -77,7 +80,10 @@ const mainReducer = (state, action) => {
     case 'WRITE_DIARY':
       return {
         ...state,
-        currentDiary: { ...state.currentDiary, content: action.write },
+        currentDiary: {
+          ...state.currentDiary,
+          content: sanitizeHtml(action.write, allowedHtml),
+        },
       };
     case 'SUBMIT_DIARY':
       return {
@@ -160,6 +166,14 @@ const mainReducer = (state, action) => {
           date: action.date,
         },
       };
+    case 'CHANGE_LOCATION':
+      return {
+        ...state,
+        currentDiary: {
+          ...state.currentDiary,
+          location: action.location,
+        },
+      };
     case 'SET_EDIT_STATE':
       return {
         ...state,
@@ -184,11 +198,19 @@ const mainReducer = (state, action) => {
       return {
         ...state,
         allTags: (() => {
-          const tagArr = [];
-          state.diaries.forEach((diary) => {
-            diary.tags.forEach((tag) => tagArr.push(tag));
+          let arr = [];
+          state.diaries.forEach(({ tags }) => {
+            tags.forEach((tag) => {
+              if (arr.some((v) => v.name === tag)) {
+                arr = arr.map((v) =>
+                  v.name === tag ? { ...v, count: v.count + 1 } : v,
+                );
+                return;
+              }
+              arr.push({ key: arr.length + 1, name: tag, count: 1 });
+            });
           });
-          return tagArr;
+          return arr;
         })(),
       };
     default:

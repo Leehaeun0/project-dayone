@@ -1,6 +1,6 @@
 $mainColor: #45c0ff;
 
-.timelineNav {
+.timeline {
   position: relative;
 
   .aside {
@@ -10,7 +10,6 @@ $mainColor: #45c0ff;
 
     .profile {
       border: 1px solid #dbdbdb;
-      // border-radius: 4px;
       padding: 2rem 2rem;
       width: 100%;
       height: 100%;
@@ -76,118 +75,128 @@ $mainColor: #45c0ff;
         .tag {
           margin-right: 0.7rem;
           margin-bottom: 1rem;
-
+          
           &:first-child {
             padding-left: 0;
+          }
+        }
+        
+        .aTag {
+          text-decoration: none;
+          color: #181818;
+
+          &:hover, &:focus {
+            color: $mainColor;
           }
         }
       }
     }
   }
-}
 
-.nav {
-  text-align: end;
-  padding: 1rem 0 1rem 0;
-  margin-right: -0.5rem;
 
-  a {
-    padding: 0.5rem;
+  .nav {
+    text-align: end;
+    padding: 1rem 0 1rem 0;
+    margin-right: -0.5rem;
+
+    & a {
+      padding: 0.5rem;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      width: max-content;
+      text-align: center;
+      position: absolute;
+      background: #555;
+      transition: opacity 0.3s;
+      font-size: 0.7rem;
+      padding: 3px 7px 4px;
+      z-index: 10;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    a:active,
+    a:hover,
+    a:focus {
+      color: $mainColor;
+    }
+
+    a:nth-child(1) .tooltip {
+      right: 23px;
+      top: 45px;
+    }
+
+    a:nth-child(2) .tooltip {
+      right: -7px;
+      top: 45px;
+    }
+
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 51%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #555 transparent;
+    }
+
+    a:hover .tooltip {
+      transition: 0.3s;
+      transition-delay: 0.3s;
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
-  .tooltip {
-    visibility: hidden;
-    opacity: 0;
-    width: max-content;
-    text-align: center;
-    position: absolute;
-    background: #555;
-    transition: opacity 0.3s;
-    font-size: 0.7rem;
-    padding: 3px 7px 4px;
-    z-index: 10;
-    border-radius: 5px;
-    color: #fff;
+  a:visited {
+    color: #cccccc;
   }
 
   a:active,
-  a:hover,
-  a:focus {
+  a:hover {
     color: $mainColor;
   }
 
-  a:nth-child(1) .tooltip {
-    right: 23px;
-    top: 45px;
-  }
-
-  a:nth-child(2) .tooltip {
-    right: -7px;
-    top: 45px;
-  }
-
-  .tooltip::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 51%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #555 transparent;
-  }
-
-  a:hover .tooltip {
-    transition: 0.3s;
-    transition-delay: 0.3s;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-a:visited {
-  color: #cccccc;
-}
-
-a:active,
-a:hover {
-  color: $mainColor;
-}
-
-.icon {
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.active .icon {
-  color: $mainColor;
-}
-
-.backToTop {
-  position: fixed;
-  right: calc(100vw - 92%);
-  bottom: calc(100vh - 95%);
-  padding-bottom: 3px;
-  background-color: rgba($color: $mainColor, $alpha: 1);
-  border: none;
-  border-radius: 3px;
-  width: 40px;
-  height: 35px;
-  cursor: pointer;
-  outline: none;
-  animation: fadeIn 0.3s;
-
   .icon {
-    color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+  .active .icon {
+    color: $mainColor;
   }
-  100% {
-    opacity: 1;
+
+  .backToTop {
+    position: fixed;
+    right: calc(100vw - 92%);
+    bottom: calc(100vh - 95%);
+    padding-bottom: 3px;
+    background-color: rgba($color: $mainColor, $alpha: 1);
+    border: none;
+    border-radius: 3px;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    animation: fadeIn 0.3s;
+
+    .icon {
+      color: #ffffff;
+      font-size: 1.6rem;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
