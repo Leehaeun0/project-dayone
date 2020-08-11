@@ -21,8 +21,10 @@ let end = 20;
 
 const TimeLineList = () => {
   const context = useContext(MainContext);
-  const { state, patchBookmark } = context;
+  const { state, dispatch, patchBookmark } = context;
   const { diaries } = state;
+
+  // dispatch({ type: 'GET_ALL_TAGS' });
 
   const images = [image1, image2, image3, image4];
 

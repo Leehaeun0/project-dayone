@@ -205,9 +205,7 @@ const mainReducer = (state, action) => {
                 arr = arr.map((v) =>
                   v.name === tag ? { ...v, count: v.count + 1 } : v,
                 );
-                return;
-              }
-              arr.push({ key: arr.length + 1, name: tag, count: 1 });
+              } else arr.push({ key: arr.length + 1, name: tag, count: 1 });
             });
           });
           return arr;
