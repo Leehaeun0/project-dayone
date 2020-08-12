@@ -6,7 +6,6 @@ import Map from '../Page/Map';
 import Diary from '../Page/Diary';
 import DiaryViewer from '../Page/DiaryViewer';
 import MyPage from '../Page/MyPage';
-import Login from '../Page/Login';
 import Tags from '../Page/Tags';
 
 const MainRouter = () => {
