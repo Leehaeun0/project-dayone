@@ -10,7 +10,9 @@
 
 <br>
 <br>
-[![aidnd](/src/Util/asset/dayoneCapture.png)](https://www.youtube.com/watch?v=iB43qkoJuB0)  
+
+![aidnd](/src/Util/asset/dayoneCapture.png)
+
 <br>
 
 # 구성원
