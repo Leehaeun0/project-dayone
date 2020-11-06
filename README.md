@@ -9,7 +9,6 @@
 기존의 저널링 어플리케이션 Day One을 React.js를 통하여 데스크탑 버전으로 새롭게 재설계
 
 <br>
-<br>
 
 ![aidnd](/src/Util/asset/dayoneCapture.png)
 
