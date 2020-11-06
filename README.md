@@ -2,16 +2,16 @@
 
 # Version 0.1
 
-<br/ >
+<br>
 
 # 주제
 
 기존의 저널링 어플리케이션 Day One을 React.js를 통하여 데스크탑 버전으로 새롭게 재설계
 
-<br/ >
-<br/ >
+<br>
+<br>
 [![aidnd](/src/Util/asset/dayoneCapture.png)](https://www.youtube.com/watch?v=iB43qkoJuB0)  
-<br/ >
+<br>
 
 # 구성원
 
@@ -20,7 +20,7 @@
 - T2: 이하은 (일기 작성 및 수정 페이지, 일기 보기 페이지, 검색 페이지 + 디자인)
 - T3: 주한슬 (지도 페이지)
 
-<br/ >
+<br>
 
 # 프로젝트 핵심 목표
 
@@ -30,7 +30,7 @@
 - Context API + useReducer Hooks를 이용한 상태 관리
 - CSS Module을 통하여 컴포넌트 스타일 클래스 이름의 중첩 현상 방지
 
-<br/ >
+<br>
 
 # MVP(Minimum Viable Product, 최소 기능 구현)
 
@@ -45,7 +45,7 @@
 - 마이 페이지(Option)
 - 검색 페이지(Option)
 
-<br/ >
+<br>
 
 ## 기능별 1차 목표
 
@@ -86,7 +86,7 @@
 
   - 태그를 통한 일기 검색
 
-<br/ >
+<br>
 
 ## 기능별 2차 목표(Option)
 
@@ -119,7 +119,7 @@
   - 작성한 일기의 개수 표시
   - 북마크 일기 표시
 
-<br/ >
+<br>
 
 # 사용 기술
 
@@ -131,7 +131,7 @@
 - SCSS
 - Node Express
 
-<br/ >
+<br>
 
 # 코딩 컨벤션
 
