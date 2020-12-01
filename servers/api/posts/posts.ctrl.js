@@ -3,12 +3,12 @@ const diaries = [
     id: 1,
     title: '스터디룸에서 열공하는 우리들',
     content:
-      '<p>스터디룸에서 초집중하고 있는 초록머리 조커와 뭔가 심각하게 의논을 나누고 있는 하으니랑 지미주! 이정도로 열심히 하는데 이력서 내면 당장 뽑아줘야 하는거 아닙니까?!</p>',
+      '<p>스터디룸에서 초집중하고 있는 초록머리 조커와 뭔가 심각하게 의논을 나누고 있는 하으니랑 지미주! 이정도로 열심히 하는데 이력서 내면 뽑아 주세요!</p>',
     date: '2020-5-14',
     location: {
-      lat: 37.62197524055062,
-      lng: 127.16017523675508,
-      name: '서울 성동구 성수동 2가',
+      lat: 37.544071338343684,
+      lng: 127.05670254932802,
+      name: '"서울특별시 성동구 아차산로 116"',
     },
     isBookmarked: true,
     tags: ['스터디', '프론트엔드', '프로젝트', 'DAY_ONE'],
@@ -359,20 +359,18 @@ const diaries = [
   },
   {
     id: 23,
-    title: 'Diary Title 23',
-    content: '<p>This is diary 16</p>',
-    date: '2020-7-13',
+    title: '스터디룸에서 열공하는 우리들',
+    content:
+      '<img src="https://i.ibb.co/fFk7r0G/image1.jpg"/><br/><br/><p>스터디룸에서 초집중하고 있는 초록머리 조커와 뭔가 심각하게 의논을 나누고 있는 하으니랑 지미주! 이정도로 열심히 하는데 이력서 내면 뽑아주세요!!!</p>',
+    date: '2020-6-14',
     location: {
-      lat: 37.62197524055062,
-      lng: 127.16017523675508,
-      name: '서울 성동구 성수동 2가',
+      lat: 37.54408034289898,
+      lng: 127.05671387176385,
+      name: '서울 성동구 아차산로 116',
     },
-    isBookmarked: false,
-    tags: ['태그를', '달자', 'test', '태그를', '달자', 'test'],
-    imagePaths: [
-      'https://images3.alphacoders.com/105/1052299.jpg',
-      'https://previews.123rf.com/images/rawpixel/rawpixel1611/rawpixel161125151/111072573-diary-writing-concept.jpg',
-    ],
+    isBookmarked: true,
+    tags: ['스터디', '프론트엔드', '프로젝트', 'DAY_ONE'],
+    imagePaths: ['https://i.ibb.co/fFk7r0G/image1.jpg'],
   },
   {
     id: 24,
